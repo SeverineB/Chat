@@ -5,13 +5,13 @@ import React from 'react';
 import './styles.scss';
 
 import Messages from 'src/components/Messages';
-import Input from 'src/components/Input';
+import Form from 'src/components/Form';
 
 // == Composant
 const App = () => (
   <div className="app">
     <Messages />
-    <Input />
+    <Form />
   </div>
 );
 
