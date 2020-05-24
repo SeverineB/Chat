@@ -1,8 +1,17 @@
-export function addMessage(username, text) {
+export function addMessageInList(inputValue) {
+  console.log('j\'ajoute un message');
+  const message = document.querySelector('.list-item');
   const messagesList = document.querySelector('.messages');
-  const li = document.createElement('li');
-  messagesList.appendChild(li);
+  const newLi = document.createElement('li');
+  newLi.classList.add('list-item');
+  messagesList.appendChild(newLi);
+  const newText = document.createElement('p');
+  message.appendChild(newText);
+  newText.innerHTML = inputValue;
 }
-export function randomHexColor() {
-  return `#${Math.random().toString(16).slice(2, 8)}`;
+
+export function changeTextValue() {
+  const input = document.querySelector('.form-input');
+  console.log(input.value);
+  return input.value;
 }

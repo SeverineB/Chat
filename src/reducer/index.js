@@ -1,26 +1,21 @@
 import {
-  CHANGE_TEXT_VALUE,
-  /* CHANGE_USERNAME_VALUE, */
+  ADD_MESSAGE,
 } from 'src/actions';
 
 const initialState = {
   username: 'Super Chat',
   text: 'Gné?',
-  inputValue: '',
+  /* inputValue: '', */
 };
 
 const reducer = (state = initialState, action = {}) => {
   switch (action.type) {
-    case CHANGE_TEXT_VALUE:
+    case ADD_MESSAGE:
       return {
         ...state,
-        inputValue: action.inputValue,
-      };
-    /* case CHANGE_USERNAME_VALUE:
-      return {
-        ...state,
+        text: action.text,
         username: action.username,
-      }; */
+      };
     default:
       return state;
   }

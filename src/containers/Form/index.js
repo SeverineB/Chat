@@ -2,19 +2,13 @@ import { connect } from 'react-redux';
 
 import Form from 'src/components/Form';
 
-import { addMessage } from 'src/utils';
-import { changeTextValue } from 'src/actions';
+import { addMessageInList } from 'src/utils';
 
 const mapStateToProps = null;
 
 const mapDispatchToProps = (dispatch) => ({
-  handleSubmit: () => {
-    const action = addMessage();
-
-    dispatch(action);
-  },
-  handleChange: () => {
-    const action = changeTextValue();
+  addMessage: () => {
+    const action = addMessageInList();
     dispatch(action);
   },
 });

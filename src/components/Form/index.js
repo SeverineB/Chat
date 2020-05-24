@@ -5,26 +5,38 @@ import PropTypes from 'prop-types';
 // == Import
 import './style.scss';
 
+
+
 // == Composant
-const Form = ({ inputValue, handleSubmit, handleChange }) => (
-  <form
-    onSubmit={handleSubmit}
-    className="form"
-  >
-    <input
-      className="form-input"
-      type="text"
-      placeholder="Saisissez votre message..."
-      onChange={handleChange}
-      value={inputValue}
-    />
-  </form>
+const Form = ({ inputValue, addMessage }) => {
+  const handleChange = (evt) => {
+    const newText = evt.target.value;
+    console.log(newText);
+    return newText;
+  };
+
+  return (
+    <form
+      onSubmit={() => {
+        console.log('je veux insérer un message dans la liste');
+        addMessage();
+      }}
+      className="form"
+    >
+      <input
+        className="form-input"
+        type="text"
+        placeholder="Saisissez votre message..."
+        onChange={handleChange}
+        value={inputValue}
+      />
+    </form>
 );
+};
 
 Form.propTypes = {
   inputValue: PropTypes.string.isRequired,
-  handleSubmit: PropTypes.func.isRequired,
-  handleChange: PropTypes.func.isRequired,
+  addMessage: PropTypes.func.isRequired,
 };
 
 // == Export
