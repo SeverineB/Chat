@@ -4,13 +4,11 @@ import React from 'react';
 // == Import
 import './style.scss';
 
-import Message from 'src/components/Message';
+import Message from 'src/containers/Message';
 
 // == Composant
 const Messages = () => (
   <ul className="messages">
-    <Message />
-    <Message />
     <Message />
   </ul>
 );

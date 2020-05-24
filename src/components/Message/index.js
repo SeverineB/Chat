@@ -6,16 +6,16 @@ import PropTypes from 'prop-types';
 import './style.scss';
 
 // == Composant
-const Message = ({ username, message }) => (
+const Message = ({ username, text }) => (
   <li className="list-item">
     <p className="list-item-name">{username}</p>
-    <p className="list-item-text">{message}</p>
+    <p className="list-item-text">{text}</p>
   </li>
 );
 
 Message.propTypes = {
   username: PropTypes.string.isRequired,
-  message: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
 };
 
 // == Export

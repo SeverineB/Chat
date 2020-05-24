@@ -1,0 +1,22 @@
+.list-item {
+  margin-left: auto;
+  margin-right: auto;
+  width: 600px;
+  background-color: #bddcf0;
+  font-size: 0.8em;
+  padding: 1em;
+
+  &-name {
+ text-align: left;
+  padding: 1em;
+  }
+
+  &-text {
+    color: #87a9cb;
+    display: inline-block;
+    text-align: left;
+    background-color: white;
+    border-radius: 1.5em;
+    padding: 1.2em;
+  }
+}
