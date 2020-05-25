@@ -1,17 +1,24 @@
-// == Import npm
 import React from 'react';
+import PropTypes from 'prop-types';
 
-// == Import
+import Message from 'src/components/Message';
+
 import './style.scss';
 
-import Message from 'src/containers/Message';
-
-// == Composant
-const Messages = () => (
-  <ul className="messages">
-    <Message />
-  </ul>
+const Messages = ({ messages }) => (
+  <div className="messages">
+    {messages.map((message) => (
+      <Message key={message.id} {...message} />
+    ))}
+  </div>
 );
 
-// == Export
+Messages.propTypes = {
+  messages: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+    }),
+  ).isRequired,
+};
+
 export default Messages;

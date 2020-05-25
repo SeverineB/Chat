@@ -1,10 +1,12 @@
-.app {
-  width: 800px;
-  margin: 1em auto;
-  background-color: #13405d;
-  
-}
+@import 'src/styles/vars';
 
-.app img {
-  max-width: 150px;
+.app {
+  background-color: $main-color;
+  width: 900px;
+  max-width: 80%;
+  margin: 0 auto;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }

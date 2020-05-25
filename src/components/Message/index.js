@@ -1,22 +1,21 @@
-// == Import npm
 import React from 'react';
+
 import PropTypes from 'prop-types';
 
-// == Import
-import './style.scss';
-
-// == Composant
-const Message = ({ username, text }) => (
-  <li className="list-item">
-    <p className="list-item-name">{username}</p>
-    <p className="list-item-text">{text}</p>
-  </li>
+const Message = ({ author, content }) => (
+  <div className="message">
+    <div className="message-author">{author}</div>
+    <p className="message-content">{content}</p>
+  </div>
 );
 
 Message.propTypes = {
-  username: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired,
+  author: PropTypes.string,
+  content: PropTypes.string.isRequired,
 };
 
-// == Export
+Message.defaultProps = {
+  author: 'Anonyme',
+};
+
 export default Message;

@@ -2,13 +2,25 @@ import { connect } from 'react-redux';
 
 import Form from 'src/components/Form';
 
-import { addMessageInList } from 'src/utils';
+import { addMessage, changeText } from 'src/actions';
 
-const mapStateToProps = null;
+const mapStateToProps = (state) => ({
+  inputValue: state.text,
+});
 
 const mapDispatchToProps = (dispatch) => ({
   addMessage: () => {
-    const action = addMessageInList();
+    console.log('dans addMessages je dispatch mon action');
+    const action = addMessage();
+    // avec dispatch on appelle le reducer pour traduire notre intention d'action
+    dispatch(action);
+  },
+  // prop accessible dans le composant et qui contiendra
+  // une clé: fonction
+  changeText: (value) => {
+    // j'exécute mon action creator changeText
+    // je vais passer la valeur à l'action creator pour qu'il la range dans l'objet action, ainsi elle arrivera au reducer
+    const action = changeText(value);
     dispatch(action);
   },
 });
