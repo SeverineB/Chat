@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 
 import Field from 'src/components/Field';
+import { change } from 'src/actions';
 
 // on récupère props passées au container avec ownProps
 const mapStateToProps = (state, ownProps) => {
@@ -20,8 +21,13 @@ const mapStateToProps = (state, ownProps) => {
   });
 };
 
-const mapDispatchToProps = (dispatch) => ({
-
+const mapDispatchToProps = (dispatch, ownProps) => ({
+  changeValue: (newValue) => {
+    console.log('je veux changer la valeur de champ');
+    console.log(dispatch, newValue, ownProps.name);
+    const action = change(ownProps.name, newValue);
+    dispatch(action);
+  },
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Field);

@@ -7,6 +7,7 @@ export const CHANGE_USERNAME_VALUE = 'CHANGE_USERNAME_VALUE'; */
 export const ADD_MESSAGE = 'ADD_MESSAGE';
 export const CHANGE_TEXT = 'CHANGE_TEXT';
 export const TOGGLE_OPEN = 'TOGGLE_OPEN';
+export const CHANGE = 'CHANGE';
 
 // ACTION CREATORS
 // fonction qui retourne un object avec le type d'action et les
@@ -17,13 +18,23 @@ export const TOGGLE_OPEN = 'TOGGLE_OPEN';
 export const addMessage = () => ({
   type: ADD_MESSAGE,
 });
+
 export const changeText = (value) => ({
   type: CHANGE_TEXT,
   // information véhiculée à l'action
   payload: value,
   // ou value: value, => value
 });
+
 export const toggleOpen = () => ({
   type: TOGGLE_OPEN,
   // information véhiculée à l'action
 });
+
+export const change = (key, value) => ({
+  type: CHANGE,
+  // informations véhiculées à l'action
+  key,
+  value,
+});
+

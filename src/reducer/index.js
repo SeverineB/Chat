@@ -2,6 +2,7 @@ import {
   ADD_MESSAGE,
   CHANGE_TEXT,
   TOGGLE_OPEN,
+  CHANGE,
 } from 'src/actions';
 
 import { getNextId } from 'src/selectors';
@@ -10,8 +11,6 @@ const initialState = {
   // 1. on pose la forme initiale du state
   open: true,
   text: '',
-  email: 'toto@tata.com',
-  password: '123',
   messages: [
     {
       author: 'Super Chat',
@@ -82,6 +81,11 @@ const reducer = (state = initialState, action = {}) => {
       return {
         ...state,
         open: !state.open,
+      };
+    case CHANGE:
+      return {
+        ...state,
+        [action.key]: action.value,
       };
     default:
       return state;
