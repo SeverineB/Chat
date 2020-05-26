@@ -6,15 +6,15 @@ import './styles.scss';
 
 import Messages from 'src/containers/Messages';
 import Form from 'src/containers/Form';
-import PseudoForm from 'src/components/PseudoForm';
+import Settings from 'src/containers/Settings';
 
 // == Composant
 const App = () => {
   return (
     <div className="app">
-      <PseudoForm />
       <Messages />
       <Form />
+      <Settings />
     </div>
 );
 };

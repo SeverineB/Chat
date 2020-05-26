@@ -1,11 +1,10 @@
 // == Import npm
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Send } from 'react-feather';
 
 // == Import
 import './style.scss';
-
-
 
 // == Composant
 const Form = ({ inputValue, addMessage, changeText }) => {
@@ -40,7 +39,7 @@ const Form = ({ inputValue, addMessage, changeText }) => {
         onChange={handleChange}
         value={inputValue}
       />
-      <button className="form-button" type="submit">&gt;</button>
+      <button className="form-button" type="submit"><Send /></button>
     </form>
 );
 };
