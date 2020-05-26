@@ -8,6 +8,7 @@ export const ADD_MESSAGE = 'ADD_MESSAGE';
 export const CHANGE_TEXT = 'CHANGE_TEXT';
 export const TOGGLE_OPEN = 'TOGGLE_OPEN';
 export const CHANGE = 'CHANGE';
+export const LOGIN = 'LOGIN';
 
 // ACTION CREATORS
 // fonction qui retourne un object avec le type d'action et les
@@ -38,3 +39,7 @@ export const change = (key, value) => ({
   value,
 });
 
+export const login = () => ({
+  type: LOGIN,
+  // informations véhiculées à l'action
+});

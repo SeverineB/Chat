@@ -27,6 +27,7 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
     console.log(dispatch, newValue, ownProps.name);
     const action = change(ownProps.name, newValue);
     dispatch(action);
+    console.log(action);
   },
 });
 
