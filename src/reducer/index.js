@@ -7,8 +7,11 @@ import {
 import { getNextId } from 'src/selectors';
 
 const initialState = {
-  open: false,
+  // 1. on pose la forme initiale du state
+  open: true,
   text: '',
+  email: 'toto@tata.com',
+  password: '123',
   messages: [
     {
       author: 'Super Chat',

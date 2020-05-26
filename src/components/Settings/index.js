@@ -2,18 +2,18 @@ import React from 'react';
 import { Plus } from 'react-feather';
 import PropTypes from 'prop-types';
 
-import Field from 'src/components/Field';
+import Field from 'src/containers/Field';
 import './style.scss';
 
 const Settings = ({ open, toggleOpen }) => (
-  <div className="settings">
+  <div className={open ? 'settings settings--open' : 'settings'}>
     <button onClick={toggleOpen} className="settings-toggler" type="button">
       <Plus color="#0055ff" size="100%" />
     </button>
     {open && (
       <form className="settings-form">
-        <Field type="email" placeholder="Email" />
-        <Field type="password" placeholder="Mot de passe" />
+        <Field type="email" placeholder="Email" name="email" />
+        <Field type="password" placeholder="Mot de passe" name="password" />
         <button className="settings-submit" type="submit">Envoyer</button>
       </form>
     )}

@@ -39,7 +39,9 @@ const Form = ({ inputValue, addMessage, changeText }) => {
         onChange={handleChange}
         value={inputValue}
       />
-      <button className="form-button" type="submit"><Send /></button>
+      <button className="form-button" type="submit">
+        <Send />
+      </button>
     </form>
 );
 };
