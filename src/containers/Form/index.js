@@ -2,16 +2,16 @@ import { connect } from 'react-redux';
 
 import Form from 'src/components/Form';
 
-import { addMessage, changeText } from 'src/actions';
+import { sendMessage, changeText } from 'src/actions';
 
 const mapStateToProps = (state) => ({
   inputValue: state.text,
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  addMessage: () => {
+  send: () => {
     console.log('dans addMessages je dispatch mon action');
-    const action = addMessage();
+    const action = sendMessage();
     // avec dispatch on appelle le reducer pour traduire notre intention d'action
     dispatch(action);
   },

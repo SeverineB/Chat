@@ -3,7 +3,13 @@ import PropTypes from 'prop-types';
 
 import './style.scss';
 
-const Field = ({ value, type, placeholder, name, changeValue }) => (
+const Field = ({
+  value,
+  type,
+  placeholder,
+  name,
+  changeValue,
+}) => (
   <input
     value={value}
     className="field"

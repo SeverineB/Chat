@@ -4,11 +4,13 @@
 // par convention on va écrire le nom de la variable commme l'action
 /* export const CHANGE_TEXT_VALUE = 'CHANGE_TEXT_VALUE';
 export const CHANGE_USERNAME_VALUE = 'CHANGE_USERNAME_VALUE'; */
-export const ADD_MESSAGE = 'ADD_MESSAGE';
+export const SEND_MESSAGE = 'SEND_MESSAGE';
 export const CHANGE_TEXT = 'CHANGE_TEXT';
 export const TOGGLE_OPEN = 'TOGGLE_OPEN';
 export const CHANGE = 'CHANGE';
 export const LOGIN = 'LOGIN';
+export const WS_CONNECT = 'WS_CONNECT';
+export const RECEIVE_MESSAGE = 'RECEIVE_MESSAGE';
 
 // ACTION CREATORS
 // fonction qui retourne un object avec le type d'action et les
@@ -16,8 +18,8 @@ export const LOGIN = 'LOGIN';
 // par convention on nomme ces fonctions comme le type d'action (action type)
 // mais en camelCase
 // fonction car configurable et paramétrable
-export const addMessage = () => ({
-  type: ADD_MESSAGE,
+export const sendMessage = () => ({
+  type: SEND_MESSAGE,
 });
 
 export const changeText = (value) => ({
@@ -42,4 +44,13 @@ export const change = (key, value) => ({
 export const login = () => ({
   type: LOGIN,
   // informations véhiculées à l'action
+});
+
+export const wsConnect = () => ({
+  type: WS_CONNECT,
+});
+
+export const receiveMessage = (message) => ({
+  type: RECEIVE_MESSAGE,
+  message,
 });

@@ -2,11 +2,16 @@
 
 .app {
   background-color: $main-color;
+  border-radius: 10px;
   width: 900px;
   max-width: 80%;
   margin: 0 auto;
-  height: 100vh;
+  margin-top: 2em;
+  height: 90vh;
   position: relative;
   display: flex;
   flex-direction: column;
+  box-shadow: 2px 2px 31px -8px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 2px 2px 31px -8px rgba(0,0,0,0.75);
+  -moz-box-shadow: 2px 2px 31px -8px rgba(0,0,0,0.75);
 }

@@ -7,11 +7,11 @@ import { Send } from 'react-feather';
 import './style.scss';
 
 // == Composant
-const Form = ({ inputValue, addMessage, changeText }) => {
+const Form = ({ inputValue, send, changeText }) => {
   const handleSubmit = (evt) => {
     console.log('au submit je réagis en executant send');
     evt.preventDefault();
-    addMessage();
+    send();
   };
   const handleChange = (evt) => {
     // je veux intéragir pour modifier la valeur du champ quand j'écris dans le champ
@@ -43,12 +43,12 @@ const Form = ({ inputValue, addMessage, changeText }) => {
         <Send />
       </button>
     </form>
-);
+  );
 };
 
 Form.propTypes = {
   inputValue: PropTypes.string.isRequired,
-  addMessage: PropTypes.func.isRequired,
+  send: PropTypes.func.isRequired,
   changeText: PropTypes.func.isRequired,
 };
 

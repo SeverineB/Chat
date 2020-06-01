@@ -15,6 +15,7 @@
 // cad de fonction qui retourne une fonction qui retourne une fonction
 const debug = (store) => (next) => (action) => {
   console.log(action);
+  next(action);
 };
 
 export default debug;
