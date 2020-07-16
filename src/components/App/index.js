@@ -11,7 +11,6 @@ import './styles.scss';
 
 // == Composant
 const App = ({ webSocketConnect }) => {
-  // après le rendu initial de l'application, cad dès que l'appli est prête je veux ouvrir le canal de discussion avec le serveur
   useEffect(webSocketConnect, []);
   return (
     <div className="app">
