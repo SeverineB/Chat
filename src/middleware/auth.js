@@ -6,9 +6,11 @@ const auth = (store) => (next) => (action) => {
   switch (action.type) {
     case LOGIN: {
       const state = store.getState();
-      axios.post('http://chatroom.severinebianchi.com/login', {
+      axios.post('http://chatroom-server.severinebianchi.com/login', {
         email: state.email,
         password: state.password,
+      }, {
+        withCredentials: true,
       })
         .then((response) => {
           console.log('response', response.data);

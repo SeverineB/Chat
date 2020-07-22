@@ -6,10 +6,12 @@ const socket = (store) => (next) => (action) => {
   console.log('dans socket middleware', action);
   switch (action.type) {
     case WS_CONNECT:
-      socketCanal = window.io('http://chatroom.severinebianchi.com:3001');
+      socketCanal = window.io('http://chatroom-server.severinebianchi.com');
       socketCanal.on('send_message', (message) => {
         console.log('un message a été envoyé', message);
         store.dispatch(receiveMessage(message));
+      }, {
+        withCredentials: true,
       });
       break;
     case SEND_MESSAGE: {
