@@ -3,8 +3,8 @@
 ## Description
 
 Ce projet a été créé lors de ma formation, pendant le mois de spécialisation en React/Redux.
-
-C'est une messagerie instantanée utilisant les websockets et permettant aux utilisateurs de dialoguer en temps réel. On peut dialoguer de façon anonyme, ou se connecter afin de dialoguer avec son pseudo.
+C'est une messagerie instantanée permettant aux utilisateurs de dialoguer en temps réel. On peut dialoguer de façon anonyme, ou se connecter afin de dialoguer avec son pseudo.
+Elle utilise les websockets et un serveur Node.js.
 
 ## Fabriqué avec
 
@@ -12,6 +12,7 @@ C'est une messagerie instantanée utilisant les websockets et permettant aux uti
 * [Redux](https://redux.js.org/)
 * Axios - Bibliothèque Javascript
 * [Sass](https://sass-lang.com/) - Pré-processeur CSS
+* [Node.js](https://nodejs.org/en/)
 * [VSCode](https://code.visualstudio.com/) - Editeur de textes
 
 ## Mise en production
