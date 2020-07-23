@@ -10,7 +10,7 @@ C'est une messagerie instantanée utilisant les websockets et permettant aux uti
 
 * [React.js](https://fr.reactjs.org/)
 * [Redux](https://redux.js.org/)
-* [Axios] - Framework Ajax
+* Axios - Bibliothèque Javascript
 * [Sass](https://sass-lang.com/) - Pré-processeur CSS
 * [VSCode](https://code.visualstudio.com/) - Editeur de textes
 
