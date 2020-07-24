@@ -3,7 +3,7 @@
 ## Description
 
 Ce projet a été créé lors de ma formation, pendant le mois de spécialisation en React/Redux.
-C'est une messagerie instantanée permettant aux utilisateurs de dialoguer en temps réel. On peut dialoguer de façon anonyme, ou se connecter afin de dialoguer avec son pseudo.
+C'est une messagerie instantanée permettant aux utilisateurs de dialoguer en temps réel.
 Elle utilise les websockets et un serveur Node.js.
 
 ## Fabriqué avec
@@ -14,6 +14,9 @@ Elle utilise les websockets et un serveur Node.js.
 * [Sass](https://sass-lang.com/) - Pré-processeur CSS
 * [Node.js](https://nodejs.org/en/)
 * [VSCode](https://code.visualstudio.com/) - Editeur de textes
+
+## Améliorations à apporter
+Ce projet étant une ébauche de messagerie instantanée afin d'apprendre Node.js, il reste des améliorations/corrections à y apporter et j'y travaille actuellement.
 
 ## Mise en production
 
